@@ -9,8 +9,10 @@ db.authenticate()
     .then( () => console.log('Base de datos conectada'))
     .catch(error => console.log(error))
 
-app.use( '/', router);
+app.use(express.json());    
+app.use(express.urlencoded({extended:true}));
 
+app.use( '/', router);
 
 
 app.listen(port, ()=> {
