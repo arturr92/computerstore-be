@@ -3,7 +3,7 @@ import db from '../config/db.js';
 
 export const Cliente = db.define('cliente', {
     id: {
-        type: Sequelize.STRING, 
+        type: Sequelize.INTEGER, 
         primaryKey: true
     },
     apellido: Sequelize.STRING,

@@ -8,7 +8,7 @@ export const Disco_rigido = db.define('disco_rigido', {
     velocidad: Sequelize.STRING,
     fabricante: Sequelize.STRING,
     id: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         primaryKey: true,
     }
 }, {tableName: 'disco_rigido'});

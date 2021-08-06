@@ -8,7 +8,7 @@ export const Memoria_ram = db.define('memoria_ram', {
     velocidad: Sequelize.STRING,
     fabricante: Sequelize.STRING,
     id: {
-        type: Sequelize.STRING, 
+        type: Sequelize.INTEGER, 
         primaryKey: true
     }
 }, {tableName: 'memoria_ram'});

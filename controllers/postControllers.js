@@ -1,10 +1,21 @@
-import { Microprocesador, Cliente, Memoria_ram, Placa_video, Disco_rigido, Carritocliente } from '../models/indexModels.js';
+import { Microprocesador,
+        Cliente, 
+        Memoria_ram, 
+        Placa_video, 
+        Disco_rigido, 
+        Carritocliente, 
+        Accesorio, 
+        Factura, 
+        Orden_de_compra, 
+        Pc, 
+        Sucursal } 
+        from '../models/indexModels.js';
 
 
 const postProductos = async (req, res, next) => {
     console.log('reqqqqqq ', JSON.stringify(req.body))
     try {
-        await Carritocliente.create(req.body);
+        await Sucursal.create(req.body);
     } catch (error) {
         console.error(error);
         res.json({message: 'Error'})
