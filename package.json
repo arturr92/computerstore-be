@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "type": "module",
   "keywords": [],
@@ -17,6 +17,7 @@
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
+    "jest": "^27.0.6",
     "nodemon": "^2.0.12"
   }
 }
