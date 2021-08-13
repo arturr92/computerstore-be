@@ -1,4 +1,4 @@
-import { Sequelize } from 'sequelize';
+const { Sequelize } = require('sequelize');
 
 const db = new Sequelize('computacion', 'root', '', {
     host: '127.0.0.1',
@@ -16,4 +16,4 @@ const db = new Sequelize('computacion', 'root', '', {
     operatorsAliases: false
 });
 
-export default db;
+module.exports = db;
