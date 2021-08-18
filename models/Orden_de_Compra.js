@@ -1,7 +1,7 @@
-import Sequelize from 'sequelize';
-import db from '../config/db.js';
+const Sequelize = require('sequelize');
+const db = require('../config/db.js');
 
-export const Orden_de_compra = db.define('orden_de_compra', {
+const Orden_de_compra = db.define('orden_de_compra', {
     fecha: Sequelize.DATE,
     numero: Sequelize.DECIMAL,
     precio: Sequelize.DECIMAL,
@@ -15,3 +15,5 @@ export const Orden_de_compra = db.define('orden_de_compra', {
         foreignKey: true
     },
 }, {tableName: 'orden_de_compra'});
+
+module.exports = Orden_de_compra;

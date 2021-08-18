@@ -1,7 +1,7 @@
-import Sequelize from 'sequelize';
-import db from '../config/db.js';
+const Sequelize = require('sequelize');
+const db = require('../config/db.js');
 
-export const Memoria_ram = db.define('memoria_ram', {
+const Memoria_ram = db.define('memoria_ram', {
     codigo: Sequelize.STRING,
     tipo: Sequelize.STRING,
     capacidad: Sequelize.STRING,
@@ -13,3 +13,4 @@ export const Memoria_ram = db.define('memoria_ram', {
     }
 }, {tableName: 'memoria_ram'});
 
+module.exports = Memoria_ram;

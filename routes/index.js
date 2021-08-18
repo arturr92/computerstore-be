@@ -1,6 +1,7 @@
-import express from 'express';
+const { Router } = require('express')
+const router = Router();
 
-import {
+const {
     getInicio,
     getProductos,
     getCarrito,
@@ -8,31 +9,30 @@ import {
     getOrden,
     getFactura,
     getCliente,
-} from '../controllers/getControllers.js';
+} = require('../controllers/getControllers.js');
 
-import {
+const { 
     postProductos,
     postCarrito,
     postOrden,
     postFactura,
     postCliente
-} from '../controllers/postControllers.js';
+} = require('../controllers/postControllers.js');
 
-import {
+const {
     putCarrito,
     putOrden,
     putFactura,
     putCliente,
-} from '../controllers/putControllers.js';
+} = require('../controllers/putControllers.js');
 
-import {
+const {
     deleteCarrito,
     deleteOrden,
     deleteFactura,
     deleteCliente
-} from '../controllers/deleteControllers.js';
+} = require('../controllers/deleteControllers.js');
 
-const router = express.Router();
 
 router.get('/', getInicio);
 router.get('/productos', getProductos);
@@ -56,4 +56,4 @@ router.put('/cliente', putCliente);
 router.delete('/cliente', deleteCliente);
 
 
-export default router;
+module.exports = router;

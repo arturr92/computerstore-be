@@ -1,7 +1,7 @@
-import Sequelize from 'sequelize';
-import db from '../config/db.js';
+const Sequelize = require('sequelize');
+const db = require('../config/db.js');
 
-export const Factura = db.define('factura', {
+const Factura = db.define('factura', {
     fecha: Sequelize.DATE,
     numero: Sequelize.DECIMAL,
     id: {
@@ -13,3 +13,5 @@ export const Factura = db.define('factura', {
         foreignKey: true
     }
 }, {tableName: 'factura'});
+
+module.exports = Factura;

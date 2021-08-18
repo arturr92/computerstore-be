@@ -1,7 +1,7 @@
-import Sequelize from 'sequelize';
-import db from '../config/db.js';
+const Sequelize = require('sequelize');
+const db = require('../config/db.js');
 
-export const Sucursal = db.define('sucursal', {
+const Sucursal = db.define('sucursal', {
     direccion: Sequelize.STRING,
     email: Sequelize.STRING,
     telefono: Sequelize.DECIMAL,
@@ -15,3 +15,5 @@ export const Sucursal = db.define('sucursal', {
         foreignKey: true
     },
 }, {tableName: 'sucursal'});
+
+module.exports = Sucursal;

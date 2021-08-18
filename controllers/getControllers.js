@@ -1,4 +1,5 @@
-import { Microprocesador,
+const {
+    Microprocesador,
     Cliente, 
     Memoria_ram, 
     Placa_video, 
@@ -8,8 +9,9 @@ import { Microprocesador,
     Factura, 
     Orden_de_compra, 
     Pc, 
-    Sucursal } 
-    from '../models/indexModels.js';
+    Sucursal
+} = require('../models/indexModels.js');
+
 
 const getInicio = (req, res) => {
     res.send('Inicio')
@@ -34,7 +36,7 @@ const detalleProducto = (req, res) => {
 };
 
 
-export {
+module.exports = {
     getInicio,
     getProductos,
     getCarrito,

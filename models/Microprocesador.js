@@ -1,7 +1,7 @@
-import Sequelize from 'sequelize';
-import db from '../config/db.js';
+const Sequelize = require('sequelize');
+const db = require('../config/db.js');
 
-export const Microprocesador = db.define('microprocesador', {
+const Microprocesador = db.define('microprocesador', {
     cache:   Sequelize.STRING,
     cantidad_hilos: Sequelize.DECIMAL,
     codigo: Sequelize.STRING,
@@ -12,3 +12,5 @@ export const Microprocesador = db.define('microprocesador', {
         primaryKey: true
     },
 }, { tableName: 'microprocesador'});
+
+module.exports = Microprocesador;

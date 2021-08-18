@@ -1,7 +1,7 @@
-import Sequelize from 'sequelize';
-import db from '../config/db.js';
+const Sequelize = require('sequelize');
+const db = require('../config/db.js');
 
-export const Pc = db.define('pc', {
+const Pc = db.define('pc', {
     codigo: Sequelize.STRING,
     alto: Sequelize.DECIMAL,
     ancho: Sequelize.DECIMAL,
@@ -11,3 +11,5 @@ export const Pc = db.define('pc', {
         primaryKey: true
     },
 }, {tableName:'pc'});
+
+module.exports = Pc;

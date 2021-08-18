@@ -1,7 +1,7 @@
-import Sequelize from 'sequelize';
-import db from '../config/db.js';
+const Sequelize = require('sequelize');
+const db = require('../config/db.js');
 
-export const Cliente = db.define('cliente', {
+const Cliente = db.define('cliente', {
     id: {
         type: Sequelize.INTEGER, 
         primaryKey: true
@@ -14,3 +14,5 @@ export const Cliente = db.define('cliente', {
     mail: Sequelize.STRING,
     telefono: Sequelize.INTEGER,
 }, {tableName: 'cliente'});
+
+module.exports = Cliente;

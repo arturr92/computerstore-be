@@ -1,8 +1,8 @@
 const Accesorio = require('./Accesorio.js');
 const mockAccesorio = {
-  codigo: 123,
-  descripcion: 'accesorio test',
-  id: 456,
+    codigo: 123,
+    descripcion: 'accesorio test',
+    id: 456,
 };
 
 describe('Testeando AccesorioModels', () => {

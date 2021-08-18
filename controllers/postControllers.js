@@ -1,15 +1,16 @@
-import { Microprocesador,
-        Cliente, 
-        Memoria_ram, 
-        Placa_video, 
-        Disco_rigido, 
-        Carritocliente, 
-        Accesorio, 
-        Factura, 
-        Orden_de_compra, 
-        Pc, 
-        Sucursal } 
-        from '../models/indexModels.js';
+const {
+    Microprocesador,
+    Cliente, 
+    Memoria_ram, 
+    Placa_video, 
+    Disco_rigido, 
+    Carritocliente, 
+    Accesorio, 
+    Factura, 
+    Orden_de_compra, 
+    Pc, 
+    Sucursal
+} = require('../models/indexModels.js');
 
 
 const postProductos = async (req, res, next) => {
@@ -40,7 +41,7 @@ const postCliente = (req, res) => {
     res.send('cliente')
 };
 
-export {
+module.exports = {
     postProductos,
     postCarrito,
     postOrden,

@@ -1,7 +1,7 @@
-import Sequelize from 'sequelize';
-import db from '../config/db.js';
+const Sequelize = require('sequelize');
+const db = require('../config/db.js');
 
-export const Disco_rigido = db.define('disco_rigido', {
+const Disco_rigido = db.define('disco_rigido', {
     codigo: Sequelize.STRING,
     tipo: Sequelize.STRING,
     capacidad: Sequelize.STRING,
@@ -12,3 +12,5 @@ export const Disco_rigido = db.define('disco_rigido', {
         primaryKey: true,
     }
 }, {tableName: 'disco_rigido'});
+
+module.exports = Disco_rigido;

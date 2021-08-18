@@ -1,4 +1,5 @@
-import { Microprocesador,
+const {
+    Microprocesador,
     Cliente, 
     Memoria_ram, 
     Placa_video, 
@@ -8,8 +9,9 @@ import { Microprocesador,
     Factura, 
     Orden_de_compra, 
     Pc, 
-    Sucursal } 
-    from '../models/indexModels.js';
+    Sucursal
+} = require('../models/indexModels.js');
+
 
 const deleteCarrito = (req, res) => {
     res.send('Carrito')
@@ -27,8 +29,7 @@ const deleteCliente = (req, res) => {
     res.send('cliente')
 };
 
-
-export {
+module.exports = {
     deleteCarrito,
     deleteOrden,
     deleteFactura,
